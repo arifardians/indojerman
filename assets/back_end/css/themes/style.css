@@ -1,0 +1,30 @@
+.no {
+	width: 5%;
+}
+.soal {
+	width: 20%;
+}
+.penjelasan {
+	width: 30%;
+}
+.jenis_soal{
+	width: 20%;
+}
+.action{
+	width: 25%;
+}
+
+.my-pagination a, .my-pagination strong{
+	background: #e3e3e3;
+	padding: 4px 7px;
+	text-decoration: none;
+	border: 1px solid #cac9c9;
+	color: #292929;
+	font-size: 13px;
+
+}
+
+.my-pagination strong, .my-pagination a:hover{
+	font-weight : normal;
+	background: #cac9c9;
+}

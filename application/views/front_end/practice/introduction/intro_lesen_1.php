@@ -1,0 +1,1 @@
+<p>Pada bagian pertama perserta akan berhadapan dengan bacaan (biasanya berupa surat) yang diikuti oleh beberapa pernyataan. Pertanyaan &ndash; pernyataan tersebut bernilai benar jika sesuai dengan isi surat. Dan bernilai salah jika tidak sesuai atau bertentangan dengan isi surat. Satu bacaan surat biasanya terdiri dari 2 &ndash; 3 pernyataan yang berbeda.&nbsp;</p>
