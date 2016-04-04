@@ -12,7 +12,7 @@
                         <label><?php echo $option->text; ?></label>
                         <img src="<?php echo base_url().$option->image; ?>" style="width: 100%; max-width: 400px;">
                     </div>
-                <? endforeach; ?>
+                <?php endforeach; ?>
                  
             </div>
         </div>
@@ -32,4 +32,4 @@
         <?php endforeach; ?>
     </div>
 </div>
-<script src="<?php echo base_url() ?>assets/scripts/examination/exam_progress_bar.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>assets/scripts/examination/exam_progress_bar.js" type="text/javascript"></script>

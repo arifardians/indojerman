@@ -25,7 +25,15 @@
     <link href="<?php echo base_url()?>assets/front_end/css/themes/blue.css" rel="stylesheet" type="text/css" id="style_color"/>    
     <link rel="shortcut icon" href="favicon.ico" />
     <script src="<?php echo base_url();?>assets/plugins/jquery-1.10.1.min.js" type="text/javascript"></script>
-    
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+        d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+        _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+        $.src="//v2.zopim.com/?3DbEP5R1V7OJn3XE95vNMCkN2yHDA82X";z.t=+new Date;$.
+        type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+    </script>
+    <!--End of Zopim Live Chat Script-->
 </head>
 <!-- END HEAD -->
 
@@ -84,7 +92,9 @@
     <!-- BEGIN CORE PLUGINS -->
     <script src="<?php echo base_url();?>assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
     <script src="<?php echo base_url();?>assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- 
     <script type="text/javascript" src="<?php echo base_url();?>assets/plugins/back-to-top.js"></script>    
+     -->
     <script type="text/javascript" src="<?php echo base_url();?>assets/plugins/bxslider/jquery.bxslider.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>    
     <script type="text/javascript" src="<?php echo base_url();?>assets/plugins/hover-dropdown.js"></script>

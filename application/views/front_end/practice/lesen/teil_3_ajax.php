@@ -7,6 +7,8 @@
 ?>
 
 <input type="hidden" id="no_soal" name="no_soal" value="<?php echo $i; ?>">
+<input type="hidden" id="base_url" value="<?php echo base_url() ?>" />
+
 <div class="control-group">
     <div class="controls">
         <label class="label label-important" style="padding:10px"> Pertanyaan </label>

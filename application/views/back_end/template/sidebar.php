@@ -23,7 +23,7 @@
 				</li>
 
 				<!-- BEGIN FRONT DEMO -->
-				<li class="tooltips <?php echo $this->router->class == 'soalstructure_controller'
+				<!-- <li class="tooltips <?php echo $this->router->class == 'soalstructure_controller'
 									|| $this->router->class == 'soalreading_controller'
 									|| $this->router->class == 'soallistening_controller' ? 'active' : ''  ?>"
 									data-placement="right" data-original-title="Dashboar&nbsp;Untuk&nbsp;Artikel&nbsp;Admin">
@@ -46,7 +46,7 @@
 							<a href="<?php echo base_url()?>soal_lst">Listening</a>
 						</li>
 					</ul>
-				</li> 
+				</li>  -->
 
 				<li class="tooltips <?php echo $this->router->class == 'lesen_1_controller'
 												   || $this->router->class == 'lesen_2_controller'

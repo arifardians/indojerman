@@ -28,7 +28,7 @@ class User_controller extends MY_Controller
 
 		// generate table
 		$this->load->library('table');
-		$this->table->set_heading('No', 'User', 'Email', 'Address', 'Group', 'Actions');
+		$this->table->set_heading('No', 'Full Name', 'Email', 'Group', 'Actions');
 
 		$tmpl = array('table_open' => '<table class="table table-striped table-bordered table-hover table-full-width">',
 					  'table_close'=> '</table>');
@@ -50,15 +50,15 @@ class User_controller extends MY_Controller
 
 		$i = 0+$offset;
 		foreach ($users as $user) {
-			$cell_username 	 	    = array('data'=> $user->username, 'max-width'=>'20%');
+			$cell_username 	 	    = array('data'=> $user->first_name .' '. $user->last_name, 'max-width'=>'20%');
 			$cell_email   			= array('data'=> $user->email, 'max-width' => '20%');
-			$cell_address			= array('data'=> $user->address, 'max-width' => '20%');
+			// $cell_address			= array('data'=> $user->address, 'max-width' => '20%');
 			$usergroup 				= $this->user_group->get_data_by_id($user->user_group);
 			$cell_group				= array('data'=> $usergroup->nama);
 			$this->table->add_row(++$i,
 								  $cell_username,
 								  $cell_email,
-								  $cell_address,
+								  // $cell_address,
 								  $cell_group,
 								  anchor(base_url()."user_prev/".$user->id, '<span> <i class="fa fa-eye"></i> </span> View', array('class'=> 'btn yellow')).' | '.
 								  anchor(base_url().'user/'.$user->id, '<span> <i class="fa fa-edit"></i> </span> Edit', array('class'=>'btn blue')).' | '.

@@ -109,7 +109,7 @@ class Lesenpractice_2_controller extends CI_Controller
 			}
 
 			$nilai_akhir = ($nilai_benar/$jumlah_soal) * 100;
-			$data['nilai_akhir'] = $nilai_akhir;
+			$data['nilai_akhir'] = round($nilai_akhir,2);
 			$this->load->view('front_end/structure_test/result', $data);
 		}
 

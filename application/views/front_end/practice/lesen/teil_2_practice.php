@@ -45,8 +45,10 @@
 
             <!-- RESULT AJAX -->
             <div id="result">
-       
+            
             <input type="hidden" id="no_soal" name="no_soal" value="<?php echo $i; ?>">
+            <input type="hidden" id="base_url" value="<?php echo base_url() ?>" />
+
             <div class="control-group">
                 <div class="controls-label">
                     <label class="label label-important" style="padding:10px"> Pertanyaan </label>
@@ -60,7 +62,7 @@
                                     <label><?php echo $option->statement; ?></label>
                                     <img src="<?php echo base_url().$option->image; ?>" style="width: 100%; max-width: 400px;">
                                 </div>
-                            <? endforeach; ?>
+                            <?php endforeach; ?>
                              
                         </div>
                     </div>
@@ -126,7 +128,8 @@
      function prev_item(){
             event.preventDefault();
             var index_soal = $("#no_soal").val();
-            var url = "http://localhost/master/index.php/front_end/lesenpractice_2_controller/prev_soal";
+            var base_url = $("#base_url").val();
+            var url = base_url + "index.php/front_end/lesenpractice_2_controller/prev_soal";
             var nomor_soal = parseInt(index_soal); 
             if(nomor_soal > 0){
                 var posting = $.post(url, {no_soal: nomor_soal});
@@ -141,7 +144,8 @@
             var index_soal = $("#no_soal").val(); 
             var jumlah_soal = $("#jumlah_soal").text();
             jumlah_soal = parseInt(jumlah_soal);
-            var url = "http://localhost/master/index.php/front_end/lesenpractice_2_controller/next_soal";
+            var base_url = $("#base_url").val();
+            var url = base_url + "index.php/front_end/lesenpractice_2_controller/next_soal";
             var nomor_soal = parseInt(index_soal);
             var result = $("#result"); 
             if(nomor_soal < (jumlah_soal -1)){
@@ -166,7 +170,8 @@
        
         var form = $(this); 
         var i = $("#no_soal").val();
-        var url = "http://localhost/master/index.php/front_end/lesenpractice_2_controller/submit_teil_2";
+        var base_url = $("#base_url").val();
+        var url = base_url + "index.php/front_end/lesenpractice_2_controller/submit_teil_2";
         var posting =  $.post(url, {no_soal: i, jawaban: jawaban});
         var result = $("#soalForm #result"); 
         posting.success(function(data){
@@ -180,7 +185,6 @@
  </script>
 
  <script type="text/javascript"> 
-
     var total_seconds = 60 *10; 
     var c_minutes  = parseInt(total_seconds / 60);
     var c_seconds  = parseInt(total_seconds % 60);

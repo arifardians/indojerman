@@ -47,6 +47,7 @@
             <!-- RESULT AJAX -->
             <div id="result">
                 <input type="hidden" id="no_soal" name="no_soal" value="<?php echo $i; ?>">
+                <input type="hidden" id="base_url" value="<?php echo base_url() ?>" />
                 <div class="control-group">
                     <div class="controls">
                         <label class="label label-important" style="padding:10px"> Pertanyaan </label>
@@ -121,7 +122,8 @@
     function prev_item(){
             event.preventDefault();
             var index_soal = $("#no_soal").val();
-            var url = "http://localhost/master/index.php/front_end/lesenpractice_controller/prev_soal";
+            var base_url = $("#base_url").val();
+            var url = base_url+"index.php/front_end/lesenpractice_controller/prev_soal";
             var nomor_soal = parseInt(index_soal); 
             if(nomor_soal > 0){
                 var posting = $.post(url, {no_soal: nomor_soal});
@@ -136,7 +138,8 @@
             var index_soal = $("#no_soal").val(); 
             var jumlah_soal = $("#jumlah_soal").text();
             jumlah_soal = parseInt(jumlah_soal);
-            var url = "http://localhost/master/index.php/front_end/lesenpractice_controller/next_soal";
+            var base_url = $("#base_url").val();
+            var url = base_url+"index.php/front_end/lesenpractice_controller/next_soal";
             var nomor_soal = parseInt(index_soal);
             var result = $("#result"); 
             if(nomor_soal < (jumlah_soal -1)){
@@ -161,7 +164,8 @@
            
             var form = $(this); 
             var i = $("#no_soal").val();
-            var url = "http://localhost/master/index.php/front_end/lesenpractice_controller/submit_teil_1";
+            var base_url = $("#base_url").val();
+            var url = base_url + "index.php/front_end/lesenpractice_controller/submit_teil_1";
             var posting =  $.post(url, {no_soal: i, jawaban: jawaban});
             var result = $("#soalForm #result"); 
             posting.success(function(data){

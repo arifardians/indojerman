@@ -13,6 +13,8 @@
     ?>
 
     <input type="hidden" id="no_soal" name="no_soal" value="<?php echo $i; ?>">
+    <input type="hidden" id="base_url" value="<?php echo base_url() ?>" />
+
     <div class="control-group">
         <div class="controls-label">
             <label class="label label-important" style="padding:10px"> Pertanyaan </label>
@@ -26,7 +28,7 @@
                             <label><?php echo $option->statement; ?></label>
                             <img src="<?php echo base_url().$option->image; ?>" style="width: 100%; max-width: 400px;">
                         </div>
-                    <? endforeach; ?>
+                    <?php endforeach; ?>
                      
                 </div>
             </div>
